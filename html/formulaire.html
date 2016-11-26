@@ -46,8 +46,8 @@
 		</div>
 		<div flex-container="row" flex-gutter="24">
 			<div flex-item>
-					<span class="fs-title display-block mb">{{'html.formulaire.labelTable' | translate}}</span>
-			        <div class="divider divider--dark"></div>
+					<span ng-show="vm.label" class="fs-title display-block mb">{{'html.formulaire.labelTable' | translate}}</span>
+			        <div ng-show="vm.label" class="divider divider--dark"></div>
 			        <div ng-repeat="liste in vm.dataTableTbody track by $index">
 			        	<ul class="list mt++">
 			            	<li class="list-row list-row--multi-line">

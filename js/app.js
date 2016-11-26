@@ -1,4 +1,7 @@
-	'use strict';
+/**
+ * app : config global de l'application
+ */
+'use strict';
 angular
 	.module("adictiz", [
 		'lumx',

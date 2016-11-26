@@ -1,0 +1,17 @@
+[
+	{
+		"id" : "1",
+		"nom" : "RAKOTOARIVONY Herinjaka Antonio",
+		"occupation" : "Etudiant en Master 2 en Informatique et Systèmes Cooperatifs",
+		"desc": "Durant les deux années d'expérience acquises dans le domaine du développement d’application web, la programmation représente pour moi, non seulement un emploi, mais aussi une passion. Mon but est de piloter un grand projet informatique, et d'avoir une brillante carrière dans l’ingénierie logicielle",
+		"etablissement" : "Université de Savoie Mont Blanc",
+		"phone" : "07 81 73 21 91",
+		"email" : "herinjaka.rakotoarivony@gmail.com",
+		"addresse" : "331 Faubourg reclus, 73000 Chambéry",
+		"parcours_pro" : "NL Ocean indien, Maurice",
+		"poste" : "Développeur Web / Mobile",
+		"pays" : "France",
+		"date_exp" : "2015-2016",
+		"date_formation" : "2016-2017"
+	}
+]

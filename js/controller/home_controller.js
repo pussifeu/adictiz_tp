@@ -5,17 +5,37 @@
 angular
 	.module('adictiz')
 	.controller("HomeController", HomeController);
-HomeController.$inject = ['$filter','$scope', '$location'];
-function HomeController($filter,$scope, $location) {
+HomeController.$inject = ['$filter','$scope', '$location', 'RechercheService', '$window'];
+function HomeController($filter, $scope, $location, RechercheService, $window) {
 	var vm = this;
-
-  	//this.splitLocation = $location.$$absUrl.split("#");
-  	//console.log(this.splitLocation)
-	vm.name = $filter('translate')('HELLO_WORLD');
+	//Watcher pour le language
 	$scope.$watch(
-            function() { return $filter('translate')('HELLO_WORLD'); },
-            function(newval) {
-            	vm.name = newval;
-            }
-    );
+			  function() { return $window.localStorage["NG_TRANSLATE_LANG_KEY"]; },
+			  function(newval) {
+				  		if(newval == "en_US") {
+				  			RechercheService.getImageByJsonFile('jsondata/data_about_me_english.json').then(
+				  					function(data){
+				  						vm.about_me = data[0];
+				  					},
+				  					function(error){
+				  						console.log(error);
+				  					}
+				  			)
+				  		}
+				  		else{
+				  			RechercheService.getImageByJsonFile('jsondata/data_about_me.json').then(
+				  					function(data){
+				  						vm.about_me = data[0];
+				  					},
+				  					function(error){
+				  						console.log(error);
+				  					}
+				  			)
+				  		}
+				  			
+				  	
+			  }
+	);
+	
+  	
 }

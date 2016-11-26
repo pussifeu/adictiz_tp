@@ -13,9 +13,13 @@ function FormulaireController($filter, $scope, LxDatePickerService, $window, LxN
 	vm.enregistrerFormulaire = enregistrerFormulaire;
 	vm.data = {};
 	vm.dataTableTbody = [];
+	vm.label = false;
 	if(angular.isDefined($window.localStorage["DATA_ARRAY"]))
 		vm.dataTableTbody = JSON.parse($window.localStorage["DATA_ARRAY"]);
 	//Watcher pour le language
+
+	if(vm.dataTableTbody.length > 0)
+		vm.label = true;
 	$scope.$watch(
 		  function() { return $window.localStorage["NG_TRANSLATE_LANG_KEY"]; },
 		  function(newval) {
@@ -48,7 +52,7 @@ function FormulaireController($filter, $scope, LxDatePickerService, $window, LxN
 		form.email.$dirty = false;
 		vm.data = {};
 		vm.dataTableTbody.push(oObject);	
-		
+		vm.label = true;
 		$window.localStorage["DATA_ARRAY"] = JSON.stringify(vm.dataTableTbody);
 		LxNotificationService.success($filter('translate')('html.formulaire.message_success'));
     }

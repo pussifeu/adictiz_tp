@@ -6,8 +6,6 @@
   "html.header.recherche": "Galerie photo",
   "html.header.title":"Projet de test adictiz",
   
-  "HELLO_WORLD" : "Salut",
-  
   "html.formulaire.nom" : "Nom",
   "html.formulaire.prenom" : "Prénom",
   "html.formulaire.email" : "Email",
@@ -24,5 +22,10 @@
   "html.recherche.nomimage" : "Nom",
   "html.recherche.descimage" : "Desciption",
   "html.recherche.tagimage" : "Tag",
-  "html.recherche.categimage" : "Categorie"
+  "html.recherche.categimage" : "Categorie",
+  
+  "html.home.etablissement" : "Etablissement",
+  "html.home.parcours" : "Parcours professionnel",
+  "html.home.formation" : "Formation",
+  "html.home.contact" : "Contact"
 }

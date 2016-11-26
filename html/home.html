@@ -1,23 +1,92 @@
 <div class="p+">
-    <div class="card">
-        <div flex-container="row">
-            <div class="card__img card__img--left" style="height: 160px">
-                <img src="img/profil.jpg">
-            </div>
- 
-            <div flex-item flex-container="column">
-                <div flex-item>
-                    <div class="p+">
-                        <strong class="fs-headline display-block">Lorem Ipsum</strong>
-                        <span class="fs-subhead tc-black-2 display-block">Lorem Ipsum</span>
-                    </div>
-                </div>
- 
-                <div class="card__actions">
-                    <lx-button lx-color="black" lx-type="flat">Free sample</lx-button>
-                    <lx-button lx-color="orange" lx-type="flat">Review</lx-button>
-                </div>
-            </div>
-        </div>
-    </div>
+	<div class="card" style="height: ">
+		<div flex-container="row">
+			<div class="card__img card__img--left image-profil">
+				<img src="img/profil.jpg">
+			</div>
+
+			<div flex-item flex-container="column">
+				<div flex-item>
+					<div class="p+">
+						<strong class="fs-headline display-block">{{vm.about_me.nom}}</strong> 
+						<br><span class="fs-subhead tc-black-2 display-block">"{{vm.about_me.desc}}"</span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="p+">
+	<div class="card">
+		<div flex-container="row">
+			<div flex-item>
+				<div class="p+">
+					<strong class="fs-headline display-block">{{'html.home.formation' | translate}}</strong> 
+					<span class="fs-subhead tc-black-2 display-block">{{vm.about_me.date_formation}}: {{vm.about_me.occupation}}</span>
+				</div>
+			</div>
+
+		</div>
+		<div flex-container="row">
+			<div flex-item>
+				<div class="p+">
+					<strong class="fs-headline display-block">{{'html.home.etablissement' | translate}}</strong> 
+					<span class="fs-subhead tc-black-2 display-block">{{vm.about_me.etablissement}} {{vm.about_me.pays}} </span>
+				</div>
+			</div>
+		</div>
+		<div flex-container="row">
+			<div flex-item>
+				<div class="p+">
+					<strong class="fs-headline display-block">{{'html.home.parcours' | translate}}</strong> 
+					<span class="fs-subhead tc-black-2 display-block">{{vm.about_me.date_exp}}: {{vm.about_me.parcours_pro}}</span>
+					<span class="fs-subhead tc-black-2 display-block">{{vm.about_me.poste}}</span>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="p+">
+	<div class="card">
+		<div flex-container="row">
+			<div flex-item>
+				<div class="p+">
+					<strong class="fs-headline display-block">{{'html.home.contact' | translate}}</strong>
+
+					<ul class="list mt++">
+						<li class="list-row list-row--has-separator">
+							<div class="list-row__primary">
+								<lx-icon lx-id="phone" lx-size="s" lx-color="grey"
+									lx-type="flat"></lx-icon>
+							</div>
+							<div class="list-row__content">
+								<span class="fs-subhead tc-black-2 display-block">{{vm.about_me.phone}}</span>
+							</div>
+						</li>
+						<li class="list-row list-row--has-separator">
+							<div class="list-row__primary">
+								<lx-icon lx-id="email" lx-size="s" lx-color="grey"
+									lx-type="flat"></lx-icon>
+							</div>
+
+							<div class="list-row__content">
+								<span class="fs-subhead tc-black-2 display-block">{{vm.about_me.email}}</span>
+							</div>
+						</li>
+						<li class="list-row list-row--has-separator">
+							<div class="list-row__primary">
+								<lx-icon lx-id="city" lx-size="s" lx-color="grey" lx-type="flat"></lx-icon>
+							</div>
+
+							<div class="list-row__content">
+								<span class="fs-subhead tc-black-2 display-block">{{vm.about_me.addresse}}
+									{{vm.about_me.pays}}</span>
+							</div>
+
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
 </div>

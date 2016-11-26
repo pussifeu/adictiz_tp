@@ -5,7 +5,12 @@
 .card__actions.menu-grand-ecran {
 	border-top: none !important;
 }
-
+.image-profil{
+	height: 160px; 
+	margin-top: 20px;
+	margin-left: 20px;
+	margin-bottom: 20px;
+}
 
 .card.menu-content {
 	width: 100%;

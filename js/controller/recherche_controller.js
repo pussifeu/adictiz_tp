@@ -131,6 +131,10 @@ function searchByKeyWord() {
 					output.push(array[i]);
 					continue;
 				}
+				if (array[i].categorie.toLowerCase().indexOf(recherche) != -1){
+					output.push(array[i]);
+					continue;
+				}
 			}
 		}
 		return output;

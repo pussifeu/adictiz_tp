@@ -1,0 +1,17 @@
+[
+	{
+		"id" : "1",
+		"nom" : "Herinjaka Antonio RAKOTOARIVONY",
+		"occupation" : "Master in software engineering and cooperative systems",
+		"desc": "During the two years of experience in the field of web/mobile development, programming is not only a job for me, but also a real passion. My goal is to lead a large IT project, and to have a brilliant career in software engineering",
+		"etablissement" : "University of Savoie Mont Blanc",
+		"phone" : "07 81 73 21 91",
+		"email" : "herinjaka.rakotoarivony@gmail.com",
+		"addresse" : "331 Faubourg reclus, 73000 Chambery",
+		"parcours_pro" : "NL Indian Ocean, Mauritius",
+		"poste" : "Web / Mobile developer",
+		"pays" : "France",
+		"date_exp" : "2015-2016",
+		"date_formation" : "2016-2017"
+	}
+]

@@ -3,9 +3,7 @@
   "html.header.formulaire": "Form",
   "html.header.home": "About me",
   "html.header.recherche": "Photo gallery",
-  "html.header.title":"Project test adictiz",
-  
-  "HELLO_WORLD" : "Hello",
+  "html.header.title":"Adictiz test Project ",
   
   "html.formulaire.nom" : "Name",
   "html.formulaire.prenom" : "First name",
@@ -23,5 +21,10 @@
   "html.recherche.nomimage" : "Name",
   "html.recherche.descimage" : "Description",
   "html.recherche.tagimage" : "Tag",
-  "html.recherche.categimage" : "Categorie"
+  "html.recherche.categimage" : "Categorie",
+  
+  "html.home.etablissement" : "University",
+  "html.home.parcours" : "Professional experience",
+  "html.home.formation" : "Education",
+  "html.home.contact" : "Contact"
 }

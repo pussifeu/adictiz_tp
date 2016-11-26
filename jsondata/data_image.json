@@ -12,7 +12,7 @@
 		"nom" : "Paysage 001",
 		"img": "img/paysage/img00.jpg",
 		"desc": "Paysage 01",
-		"categorie" : "meri",
+		"categorie" : "paysage",
 		"tag" : "bateau"
 	},
 	{
@@ -20,7 +20,7 @@
 		"nom" : "Renault espace",
 		"img": "img/voiture/renault.jpg",
 		"desc": "Renault",
-		"categorie" : "mer",
+		"categorie" : "paysage",
 		"tag" : "renault"
 	},
 	{
