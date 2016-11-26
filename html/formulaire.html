@@ -3,7 +3,7 @@
 		<div class="p+ pt0">
 		 <div flex-container="row" flex-gutter="24">
 		        <div flex-item>
-			 			<lx-text-field lx-label="{{'html.formulaire.nom' | translate}}" lx-error ="form.nom.$invalid && form.nom.$touched">
+			 			<lx-text-field lx-label="{{'html.formulaire.nom' | translate}} *" lx-error ="form.nom.$invalid && form.nom.$touched">
 			        		<input type="text" 
 			        		 name ="nom"
 			        		 ng-required="true" 
@@ -19,7 +19,7 @@
 			        		 ng-model="vm.data.prenom">
 						</lx-text-field>
 			         							        	
-						<lx-text-field lx-label="{{'html.formulaire.email' | translate}}" lx-error ="form.email.$invalid && form.email.$touched">
+						<lx-text-field lx-label="{{'html.formulaire.email' | translate}} *" lx-error ="form.email.$invalid && form.email.$touched">
 			        		<input type="email" 
 			        		 required name = "email" 
 			        		 ng-model="vm.data.email"
