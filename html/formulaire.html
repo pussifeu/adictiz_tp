@@ -1,0 +1,67 @@
+<div class="card">
+	<form name="form">
+		<div class="p+ pt0">
+		 <div flex-container="row" flex-gutter="24">
+		        <div flex-item>
+			 			<lx-text-field lx-label="{{'html.formulaire.nom' | translate}}" lx-error ="form.nom.$invalid && form.nom.$touched">
+			        		<input type="text" 
+			        		 name ="nom"
+			        		 ng-required="true" 
+			        		 ng-model="vm.data.nom">
+						</lx-text-field>
+						<div ng-show="form.nom.$touched || form.nom.$dirty">
+			 	        	<span class="text-field-error" ng-show="form.nom.$error.required">{{'html.formulaire.validation.sRequired' | translate}}</span>
+			    		</div>
+			 			
+			 			<lx-text-field lx-label="{{'html.formulaire.prenom' | translate}}" lx-error ="false">
+			        		<input type="text" 
+			        		 name ="prenom"
+			        		 ng-model="vm.data.prenom">
+						</lx-text-field>
+			         							        	
+						<lx-text-field lx-label="{{'html.formulaire.email' | translate}}" lx-error ="form.email.$invalid && form.email.$touched">
+			        		<input type="email" 
+			        		 required name = "email" 
+			        		 ng-model="vm.data.email"
+			        		 ng-pattern="/^([0-9a-zA-Z]([-.\w]*[0-9a-zA-Z])*@([0-9a-zA-Z][-\w]*[0-9a-zA-Z]\.)+[a-zA-Z]{2,9})$/">
+						</lx-text-field>
+						
+	                    <div ng-show="form.email.$touched || form.email.$dirty">
+				 	        <span class="text-field-error" ng-show="form.email.$error.required">{{'html.formulaire.validation.sRequired' | translate}}</span>
+				    		<span class="text-field-error" ng-show="form.email.$error.pattern">{{'html.formulaire.validation.sEmailPattern' | translate}}</span>
+				 		</div>
+				 		
+				 		<lx-date-picker  ng-model="vm.datePicker.input.date"
+								lx-input-format="LL"
+			                    lx-locale="{{'html.formulaire.localDate' | translate}}">
+				        		<lx-text-field lx-allow-clear="true" lx-label="{{'html.formulaire.date_naissance' | translate}}">
+					            	<input type="text" ng-model="vm.datePicker.input.date_formatted">
+				        		</lx-text-field>
+			    		</lx-date-picker>
+					    <div class="btn_actions">
+				            <lx-button lx-type="raised" ng-disabled="form.$invalid" ng-click="vm.enregistrerFormulaire(vm.data, vm.datePicker.input.date_formatted, form)">{{'html.formulaire.btn_enregistrer' | translate}}</lx-button>
+				        </div>
+				</div>
+				
+		</div>
+		<div flex-container="row" flex-gutter="24">
+			<div flex-item>
+					<span class="fs-title display-block mb">{{'html.formulaire.labelTable' | translate}}</span>
+			        <div class="divider divider--dark"></div>
+			        <div ng-repeat="liste in vm.dataTableTbody track by $index">
+			        	<ul class="list mt++">
+			            	<li class="list-row list-row--multi-line">
+				                <div class="list-row__content">
+				                    <span class="display-block">{{'html.formulaire.nom' | translate}}: {{liste.nom}} </span>
+				                    <span class="display-block">{{'html.formulaire.prenom' | translate}}: {{liste.prenom}}</span>
+				                    <span class="display-block">{{'html.formulaire.email' | translate}}: {{liste.email}}</span>
+				                    <span class="display-block">{{'html.formulaire.date_naissance' | translate}}: {{liste.date_naissance}}</span>
+				                </div>
+				            </li>
+				        </ul>
+				        <div class="divider divider--dark"></div>
+			        </div>
+			  </div>
+		</div>
+	</form>
+</div>

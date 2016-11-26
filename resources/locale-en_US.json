@@ -1,0 +1,27 @@
+{
+  "directives.language-select.Language": "Language",
+  "html.header.formulaire": "Form",
+  "html.header.home": "About me",
+  "html.header.recherche": "Photo gallery",
+  "html.header.title":"Project test adictiz",
+  
+  "HELLO_WORLD" : "Hello",
+  
+  "html.formulaire.nom" : "Name",
+  "html.formulaire.prenom" : "First name",
+  "html.formulaire.email" : "Email",
+  "html.formulaire.date_naissance" : "Day of birth",
+  "html.formulaire.validation.sRequired" : "This field is required.",
+  "html.formulaire.validation.sEmailPattern": "This email adress is invalid.",
+  "html.formulaire.localDate" : "en",
+  "html.formulaire.btn_enregistrer" : "Save",
+  "html.formulaire.message_success" : "Add element  successfully",
+  "html.formulaire.labelTable": "List of data",
+  "html.recherche.fieldSearch" : "Filter by categorie",
+  
+  "html.recherche.paceholder": "Search by name, tag, description",
+  "html.recherche.nomimage" : "Name",
+  "html.recherche.descimage" : "Description",
+  "html.recherche.tagimage" : "Tag",
+  "html.recherche.categimage" : "Categorie"
+}

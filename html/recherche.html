@@ -1,0 +1,93 @@
+<div class="card">
+<div class="p+" flex-container="row" flex-gutter="24">
+
+ 	<div flex-item = "12">
+ 		<div class="card">
+                <lx-search-filter>
+                    <input type="text" ng-model="vm.key" placeholder="{{'html.recherche.paceholder' | translate}}">
+                </lx-search-filter>
+        </div>
+	 	<div class="p+ pt0">
+		        <lx-select ng-model="vm.categorie_selected"
+		               lx-allow-clear="true"
+		               lx-choices="vm.categories"
+		               lx-display-filter="true"
+		               lx-fixed-label="true"
+		               lx-label="{{'html.recherche.fieldSearch' | translate}}">
+		        <lx-select-selected>
+		            {{ $selected.valeur }}
+		        </lx-select-selected>
+		 
+		        <lx-select-choices>
+		            {{ $choice.valeur }}
+		        </lx-select-choices>
+		    </lx-select>
+		</div>
+        
+    </div>
+ 
+
+</div>
+<div  class="p+" flex-container="row" flex-gutter="24">
+		<div flex-item>
+			<div class="responsive" style="margin-top: 20px; margin-bottom: 20px" ng-repeat="i in vm.galeries">
+				<div style="cursor: pointer;" class="img" ng-click="vm.openGallery($index)">
+						<img  ng-src="{{ i.img }}"
+							class="ng-thumb"
+							alt="Image {{ $index + 1 }}" />
+					<div class="desc">{{i.nom}}</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<lx-dialog id="{{ vm.dialogId }}" lx-size="l">
+    <lx-dialog-header>
+        <div class="toolbar bgc-primary pl++">
+            <span class="toolbar__label tc-white fs-title">
+                {{vm.info.nom}}
+            </span>
+ 
+            
+        </div>
+ 
+    </lx-dialog-header>
+    <lx-dialog-content>
+        <div class="container slider" style="float :left; width: 70%">
+        	<div class="responsive" style="margin-top: 20px; margin-bottom: 20px" ng-repeat="i in vm.galeries" >
+        		<img align="center"  class="slide img imageresponsive"
+						ng-swipe-right="vm.showPrev()" ng-swipe-left="vm.showNext()"
+						ng-show="vm.isActive($index)" ng-src="{{i.img}}" />
+						
+					<a class="arrow prev" href="" ng-click="vm.showPrev()"></a> 
+					<a class="arrow next" href="" ng-click="vm.showNext()"></a>
+					<ul class="nav">
+						<li ng-repeat="i in vm.galeries"
+							ng-class="{'active':vm.isActive($index)}">
+							<img ng-src="{{i.img}}"
+							alt="{{i.desc}}" title="{{i.desc}}"
+							ng-click="vm.showPhoto($index);" /> 
+						</li>
+					</ul>
+        	</div>
+		</div>
+		<div  style="float:right; width: 30%;">
+		<ul class="list mt++">
+            
+             <li class="list-row">
+                <div class="list-row__content">
+                    <span class="display-block">{{'html.recherche.descimage' | translate}}</span>
+                    <span class="display-block fs-body-1 tc-black-2">{{vm.info.desc}}</span>
+                </div>
+            </li>
+             <li class="list-row">
+                <div class="list-row__content">
+                    <span class="display-block">{{'html.recherche.tagimage' | translate}}</span>
+                    <span class="display-block fs-body-1 tc-black-2">#{{vm.info.tag}}</span>
+                </div>
+            </li>
+		</div>
+    </lx-dialog-content>
+ 
+</lx-dialog>

@@ -1,0 +1,28 @@
+{
+  "directives.language-select.Language": "Langue",
+  
+  "html.header.formulaire": "Formulaire",
+  "html.header.home": "A propos de moi",
+  "html.header.recherche": "Galerie photo",
+  "html.header.title":"Projet de test adictiz",
+  
+  "HELLO_WORLD" : "Salut",
+  
+  "html.formulaire.nom" : "Nom",
+  "html.formulaire.prenom" : "Prénom",
+  "html.formulaire.email" : "Email",
+  "html.formulaire.date_naissance" : "Date de naissance",
+  "html.formulaire.validation.sRequired" : "Ce champ est obligatoire.",
+  "html.formulaire.validation.sEmailPattern" : "Adresse email non valide.",
+  "html.formulaire.localDate" : "fr",
+  "html.formulaire.btn_enregistrer" : "Enregistrer",
+  "html.formulaire.message_success" : "Element ajouter avec succès",
+  "html.formulaire.labelTable": "Liste des données", 
+  "html.recherche.fieldSearch" : "Filtre par categorie",
+  
+  "html.recherche.paceholder": "Recherche par nom, tag, description",
+  "html.recherche.nomimage" : "Nom",
+  "html.recherche.descimage" : "Desciption",
+  "html.recherche.tagimage" : "Tag",
+  "html.recherche.categimage" : "Categorie"
+}

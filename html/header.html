@@ -1,0 +1,23 @@
+<header>
+	<div class="header-top">
+		<div class="toolbar__label fs-title titres">
+			<div ng-translate-language-select></div>
+		</div>
+		<div class="toolbar__left" style="margin-top:12px;">
+			<lx-dropdown position="left" from-top>
+				<button class="btn btn--l btn--black btn--icon" lx-ripple lx-dropdown-toggle>
+					<i class="mdi mdi-menu"></i>
+				</button>
+				<span class="title-project"> {{"html.header.title"| translate}}</span>
+				<lx-dropdown-menu>
+				<ul>
+					<li><a ui-sref="home" class="dropdown-link" lx-ripple>{{"html.header.home"| translate}}</a></li>
+					<li><a ui-sref="formulaire" lx-ripple class="dropdown-link">{{"html.header.formulaire"| translate}}</a></li>
+					<li><a ui-sref="recherche" class="dropdown-link" lx-ripple>{{"html.header.recherche"| translate}}</a></li>
+	
+				</ul>
+				</lx-dropdown-menu> 
+			</lx-dropdown>
+		</div>
+	</div>
+</header>
