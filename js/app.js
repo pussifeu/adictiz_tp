@@ -39,7 +39,7 @@ function loadLanguageConfig($translateProvider, DEBUG_MODE, LOCALES) {
 	}
 
 	$translateProvider.useStaticFilesLoader({
-		prefix : 'resources/locale-',
+		prefix : 'languages/locale-',
 		suffix : '.json'
 	});
 
